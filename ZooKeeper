@@ -1,0 +1,7 @@
+ZooKeeper 使用2n+1法則
+
+n=1 (保證一台 NameNode Running)
+
+zookeeper = 2 x 1 + 1 = 3
+
+vim  (:set nu 秀行號)
