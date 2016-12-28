@@ -60,7 +60,7 @@ scp hdfs-site.xml master2.example.org:/usr/local/hadoop/etc/hadoop (拷貝本地
 </property>
 <property>
   <name>dfs.ha.fencing.ssh.private-key-files</name>
-  <value>/home/hadoop/.ssh/id_rsa</value> #使用rsa_key
+  <value>/home/hadoop/.ssh/id_rsa</value> <!--使用rsa_key-->
 </property>
 
 <property> <!--每台,為了角色可便利更換，不是偷懶-->
