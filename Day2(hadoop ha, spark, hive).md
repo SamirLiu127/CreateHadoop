@@ -164,3 +164,14 @@ export PATH=$PATH:$ZOOKEEPER_HOME/bin
 `zkServer.sh start`<br>
 `jps`QuorumPeerMain
 # 
+```
+<property>
+  <name>dfs.ha.automatic-failover.enabled</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>ha.zookeeper.quorum</name>
+  <value>bdse211.example.org:2181,bdse191.example.org:2181,bdse21.example.org:2181</value>
+</property>
+```
