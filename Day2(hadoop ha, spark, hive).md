@@ -175,3 +175,43 @@ export PATH=$PATH:$ZOOKEEPER_HOME/bin
   <value>bdse211.example.org:2181,bdse191.example.org:2181,bdse21.example.org:2181</value>
 </property>
 ```
+
+```
+<property>
+   <name>yarn.resourcemanager.ha.enabled</name> <!--啟動自動化-->
+   <value>true</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.cluster-id</name> <!--設id-->
+   <value>rm_ha</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.ha.rm-ids</name>
+   <value>rm1,rm2</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.hostname.rm1</name> <!--RM1-->
+   <value>master1.example.org</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.hostname.rm2</name> <!--RM2-->
+   <value>master2.example.org</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.recovery.enabled</name>
+   <value>true</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.store.class</name>
+   <value>org.apache.hadoop.yarn.server.resourcemanager.recovery.ZKRMStateStore</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.zk-address</name> <!--zookeeper-->
+   <value>master1.example.org:2181,master2.example.org:2181,master3.example.org:2181</value>
+</property>
+
+<property>
+   <name>yarn.resourcemanager.hostname</name>
+   <value>master3.example.org</value>
+</property>
+```
