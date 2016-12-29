@@ -108,19 +108,19 @@ hadoop-daemon.sh start namenode
 > stop-dfs.sh 停止
 > start-dfs.sh啟動
 
-查看NameNode狀態(一台active,一台standby)
+查看NameNode狀態(兩台standby)
 > hdfs haadmin -getServiceState nn1
 > hdfs haadmin -getServiceState nn2
 
-測試(active的NameNode)
-hadoop-deamon.sh stop namenode
-查看另一台是否active
+啟動nn1
+> hdfs haadmin -transitionToActive nn1
+
 ```
 # ZooKeeper(version:3.4.9)
 2n+1法則:確保running台數n,求出啟動zookeeper台數<br>
 ex.1台NameNode Running, 需啟動3台zookeeper<br>
 3台zookeeper:建議與QJM相同,不用出網路即可抓到日誌，效能提升<br>
-### 1.安裝 (解壓,更名,改權限)
+### 1.安裝 (解壓,更名,改權限,QJM三台)
 C:\Users\Student\hadoop_classroom => /vagrant<br>
 ```
 > sudo tar -xvf zookeeper-3.4.9.tar.gz -C /usr/local
