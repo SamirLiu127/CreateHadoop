@@ -3,11 +3,13 @@ NameNode(HA) :主要負責管理和維護HDFS的名稱空間、並且控制檔�
 DataNode :負責執行資料讀寫動作，以及執行NameNode的副本策略<br>
 ResourceManager(JobTracker) :負責安排MapReduce運算層任務<br>
 NodeManager(TaskTracker) :負責執行運算層任務<br>
-分配
+#### 分配
 ```
-NameNode: bdse211
-ResourceManager: bdse212
-worker: bdse213
+NameNode: h151
+SecondNameNode: h152
+ResourceManager: h153
+Slave: h152, h153, h154
+JobHistory: h151
 ```
 # I. create box
 1. java1.8
