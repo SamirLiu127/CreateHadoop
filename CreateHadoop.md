@@ -2,7 +2,7 @@
 1. java1.8
 2. key rsa
 3. create hadoop user
-4. apt-get update &apt-get upgrate
+4. apt-get update & apt-get upgrate
 
 # II. vagrant create machine
 ## vagrantfile
