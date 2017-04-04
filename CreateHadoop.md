@@ -1,3 +1,14 @@
+### Hadoop
+NameNode(HA) :主要負責管理和維護HDFS的名稱空間、並且控制檔案的任何讀寫動作<br>
+DataNode :負責執行資料讀寫動作，以及執行NameNode的副本策略<br>
+ResourceManager(JobTracker) :負責安排MapReduce運算層任務<br>
+NodeManager(TaskTracker) :負責執行運算層任務<br>
+分配
+```
+NameNode: bdse211
+ResourceManager: bdse212
+worker: bdse213
+```
 # I. create box
 1. java1.8
 2. key rsa
@@ -106,7 +117,9 @@ NameNode 預設PORT:8020 要玩HA
 </property>
 ```
 ### mapred-site.xml 
-#### 定義 1.hadoop使用yarn做job分配  2.指定jobhistory server存放執行過的job(保留一個月)
+#### 定義 
+1.hadoop使用yarn做job分配<br>
+2.指定jobhistory server存放執行過的job(保留一個月)
 cp /usr/local/hadoop/etc/hadoop/mapred-site.xml.template /usr/local/hadoop/etc/hadoop/mapred-site.xml
 ```xml
 <property>
@@ -123,7 +136,9 @@ cp /usr/local/hadoop/etc/hadoop/mapred-site.xml.template /usr/local/hadoop/etc/h
 </property>
 ```
 ### yarn-site.xml 
-#### 定義 1.ResourceManager的機器   2.NodeManager(DataNode)資源使用情況
+#### 定義 
+1.ResourceManager的機器<br>
+2.NodeManager(DataNode)資源使用情況
 ```xml
 <property>
    <name>yarn.nodemanager.aux-services</name>
