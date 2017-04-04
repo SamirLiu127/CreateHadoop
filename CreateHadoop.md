@@ -70,7 +70,7 @@ end
 192.168.33.212 bdse212.example.org bdse212
 192.168.33.213 bdse213.example.org bdse213
 ```
-###2.sethosts.sh
+### 2.sethosts.sh
 ```bash
 #!/bin/bash
 cp -f /vagrant/scripts/hosts /etc/hosts
