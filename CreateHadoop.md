@@ -11,13 +11,13 @@ ResourceManager: h153
 Slave: h152, h153, h154
 JobHistory: h151
 ```
-# I. create box
+# I. Create Box
 1. java1.8
 2. key rsa
 3. create hadoop user
 4. apt-get update & apt-get upgrate
 
-# II. vagrant create machine
+# II. Vagrant Create Vachine
 ## vagrantfile
 ```bash
 Vagrant.configure(2) do |config|
@@ -70,12 +70,12 @@ end
 192.168.33.212 bdse212.example.org bdse212
 192.168.33.213 bdse213.example.org bdse213
 ```
-### 2.sethosts.sh
+### 2.sethosts.sh (host複製到虛擬機裡)
 ```bash
 #!/bin/bash
 cp -f /vagrant/scripts/hosts /etc/hosts
 ```
-# III. In machine
+# III. In Machine
 ## 1. Install Hadoop
 ```
 wget http://apache.stu.edu.tw/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
